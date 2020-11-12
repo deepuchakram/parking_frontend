@@ -18,8 +18,8 @@ pipeline {
             docker{ image 'node:12-alpine' }
         }
            steps{
-              sh 'npm install'
-              sh 'npm run build'
+              shell 'npm install'
+              shell 'npm run build'
                 }
             }
       stage('Build Image') {
@@ -43,7 +43,7 @@ pipeline {
       stage('Remove Unused Docker Image') {
          agent any
           steps{
-           sh "docker rmi $registry:$BUILD_NUMBER"
+           shell "docker rmi $registry:$BUILD_NUMBER"
                }
           }
       }
