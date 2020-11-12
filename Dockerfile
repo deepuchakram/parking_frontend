@@ -1,7 +1,7 @@
 ## FROM deepakaiden/apachetomcat
 ##FROM senthil123/dockertomcat
-FROM sudeepthi516/dockertomcat
-LABEL name="prabu"
+FROM sudeepthi/dockertomcat
+LABEL name="deepu"
 LABEL description="Use dockertomcat image as base image for custom tomcat deployment"
 USER root
 RUN mkdir /usr/local/tomcat/webapps/build/
